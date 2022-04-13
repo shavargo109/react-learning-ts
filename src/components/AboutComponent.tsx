@@ -5,30 +5,6 @@ import { LeadersData } from '../shared/leders';
 import { Box, Grid, Typography } from '@mui/material';
 
 
-export function RenderLeader(props: { leader: LeadersData[] }) {
-    props.leader.map((leader: LeadersData) => {
-        <Box>
-            <Grid container spacing={2}>
-                <Grid item xs={2}>
-                    <img src={leader.image} alt="" />
-                </Grid>
-                <Grid item xs={8}>
-                    <Grid item xs={12}>
-                        <Typography variant='h3'>{leader.name}</Typography>
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Typography variant='h4'>{leader.designation}</Typography>
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Typography variant='h2'>{leader.description}</Typography>
-                    </Grid>
-                </Grid>
-
-            </Grid>
-        </Box>
-
-    });
-}
 function About(props: { leader: LeadersData[] }) {
 
     const leaders = props.leader.map((leader: LeadersData) => {
